@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venda Oficial</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 420px;
+      margin: 40px auto;
+      background: #111;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .price {
+      text-align: center;
+      font-size: 28px;
+      color: #00ff99;
+      margin: 16px 0;
+    }
+    .desc {
+      font-size: 14px;
+      line-height: 1.6;
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+    .pix-box {
+      background: #1a1a1a;
+      border: 1px solid #00ff99;
+      border-radius: 12px;
+      padding: 12px;
+      word-break: break-all;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      border: none;
+      border-radius: 12px;
+      background: #00ff99;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #00cc77;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      opacity: 0.6;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>  <div class="container">
+    <h1>🔥 PRODUTO EXCLUSIVO 🔥</h1><p class="desc">
+  Descrição do seu produto aqui. Explique os benefícios, o que a pessoa vai receber
+  e por que ela precisa comprar agora.
+</p>
+
+<div class="price">R$ 29,90</div>
+
+<p><strong>💠 Chave Pix:</strong></p>
+<div class="pix-box" id="pix">
+  SUA-CHAVE-PIX-AQUI
+</div>
+
+<button onclick="copiarPix()">📋 Copiar Chave Pix</button>
+
+<div class="footer">
+  Após o pagamento, envie o comprovante no WhatsApp
+</div>
+
+  </div>  <script>
+    function copiarPix() {
+      const pix = document.getElementById('pix').innerText;
+      navigator.clipboard.writeText(pix);
+      alert('✅ Chave Pix copiada com sucesso!
